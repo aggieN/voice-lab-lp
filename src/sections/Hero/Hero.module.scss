@@ -1,0 +1,190 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.hero {
+  background-color: $color-bunting;
+  height: 100vh;
+
+  @media (min-width: $break-md) {
+    height: 700px;
+  }
+
+  @media (min-width: $break-lg) {
+    height: fit-content;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 60px 0;
+
+  @media (min-width: $break-lg) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.decor {
+  display: none;
+  height: 60px;
+  width: 100%;
+  background-color: $color-vanilla;
+
+  @media (min-width: $break-lg) {
+    display: block;
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $break-md) {
+    min-width: 90%;
+  }
+
+  @media (min-width: $break-lg) {
+    min-width: 50%;
+    width: 50%;
+  }
+
+  & h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+    z-index: 3;
+
+
+    @media (min-width: $break-sm) {
+      font-size: 38px;
+    }
+
+
+    @media (min-width: $break-md) {
+      font-size: 44px;
+    }
+
+    @media (min-width: $break-lg) {
+      font-size: 56px;
+    }
+
+    @media (min-width: $break-xl) {
+      font-size: 82px;
+    }
+
+    & span {
+      display: block;
+      width: fit-content;
+      background-color: $color-white;
+      margin-bottom: 14px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (min-width: $break-sm) {
+    max-width: 80%;
+  }
+
+  @media (min-width: $break-md) {
+    max-width: 90%;
+    margin-top: -120px;
+  }
+
+  @media (min-width: $break-lg) {
+    max-width: 50%;
+    margin-top: -60px;
+    margin-left: -50px;
+  }
+
+  @media (min-width: $break-2xl) {
+    margin-left: -80px;
+  }
+}
+
+.imageMobile {
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $break-sm) {
+    width: 340px;
+    height: 340px;
+  }
+
+  @media (min-width: $break-md) {
+    width: 440px;
+    height: 440px;
+  }
+
+  @media (min-width: $break-lg) {
+    display: none;
+  }
+}
+
+.imageDesktop {
+  display: none;
+
+  @media (min-width: $break-lg) {
+    display: block;
+    width: 560px;
+    height: 560px;
+  }
+
+  @media (min-width: $break-xl) {
+    width: 640px;
+    height: 640px;
+  }
+
+  @media (min-width: $break-2xl) {
+    width: 740px;
+    height: 740px;
+  }
+}
+
+.buttonDesktop {
+  display: none;
+
+  @media (min-width: $break-md) {
+    @include button;
+    margin-top: 30px;
+    display: block;
+    font-size: 14px;
+    z-index: 3;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 16px;
+    margin-top: 60px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 20px;
+    padding: 30px 40px;
+    border-radius: 44px;
+  }
+}
+
+.buttonMobile {
+  @include button;
+  font-size: 12px;
+
+  @media (min-width: $break-md) {
+    display: none;
+  }
+}
