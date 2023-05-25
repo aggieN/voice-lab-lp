@@ -1,0 +1,98 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+@import '@/styles/animations.scss';
+
+.navbar {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.star {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 4;
+
+  &Light {
+    @include star(70px, $color-jordy-blue);
+
+    &:hover {
+      background-color: $color-vanilla;
+    }
+  }
+
+  &Dark {
+    @include star(70px, $color-bunting);
+
+    &:hover {
+      background-color: $color-vanilla;
+    }
+  }
+
+  &Rotating {
+    @include rotation;
+  }
+
+  &Expanding {
+    @include opening;
+  }
+
+  &:active {
+    animation-play-state: paused;
+  }
+
+  @media (min-width: $break-lg) {
+    display: none;
+  }
+}
+
+.menuMobile {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: block;
+  background-color: $color-bouquet;
+  transform: translateX(-100%);
+  z-index: 4;
+
+  &Open {
+    transform: translateX(0%);
+    transition-property: transform;
+    transition-delay: .8s;
+  }
+
+  @media (min-width: $break-lg) {
+    display: none;
+  }
+}
+
+.navMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+
+  & li {
+    margin-bottom: 42px;
+    font-size: 38px;
+    font-weight: 500;
+    color: $color-bunting;
+
+    &:hover {
+      font-weight: 600;
+      color: $color-vanilla;
+    }
+
+    @media (min-width: $break-sm) {
+      font-size: 44px;
+    }
+
+    @media (min-width: $break-md) {
+      font-size: 52px;
+    }
+  }
+}

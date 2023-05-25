@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+// Helpers
+
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// Animations
+
+@mixin rotation {
+  @include keyframes(rotate) {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  @include animate(rotate, 4s, linear, infinite);
+}
+
+@mixin opening {
+  @include keyframes(open) {
+    5% {
+      transform: scale(1.5);
+    }
+
+    10% {
+      transform: scale(3);
+    }
+
+    30% {
+      transform: scale(9);
+    }
+
+    50% {
+      transform: scale(37);
+    }
+
+    70% {
+      transform: scale(56);
+    }
+
+    90% {
+      transform: scale(77);
+
+    }
+
+    100% {
+      transform: scale(89);
+      background-color: $color-bouquet;
+
+    }
+  }
+
+  @include animate(open, .7s, ease-out, 1);
+  animation-fill-mode: both;
+}
