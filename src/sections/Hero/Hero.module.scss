@@ -161,6 +161,43 @@
   }
 }
 
+.button {
+  cursor: pointer;
+  transition: all 1s ease-in;
+
+  span {
+    display: inline-block;
+    transition: transform .6s .1s linear;
+
+    &:first-of-type {
+      transform: rotate(10deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(-15deg);
+      transform-origin: 30%;
+    }
+
+    &:last-child {
+      margin-left: 4px;
+      transform: rotate(8deg);
+    }
+  }
+
+  &:hover {
+    box-shadow: -7px -7px 0px -2px $color-bouquet;
+    
+    span {
+      transform: rotate(0);
+    }
+  }
+
+  &:active {
+    background-color: $color-bouquet;
+  }
+}
+
+
 .buttonDesktop {
   display: none;
 

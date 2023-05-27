@@ -7,7 +7,7 @@ export const alexandria = Alexandria({
 
 export const jura = Jura({
   subsets: ['latin-ext'],
-  weight: ['400', '600']
+  weight: ['400', '600', '700']
 })
 
 export const kufam = Kufam({
