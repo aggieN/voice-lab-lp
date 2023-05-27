@@ -1,10 +1,12 @@
 "use client"
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 
 import Link from 'next/link';
+import Wrapper from '@/components/Wrapper/Wrapper';
+import Logo from '@/components/Logo/Logo'
 
-import { alexandria } from "@/utils/fonts";
+import { alexandria, jura, kufam } from "@/utils/fonts";
 import * as styles from './Navbar.module.scss';
 
 const container = {
@@ -23,9 +25,28 @@ const item = {
   show: { opacity: 1 }
 }
 
+const variants = {
+  visible: { opacity: 1, y: 0, backgroundColor: "#FFF1D7" },
+  hidden: { opacity: 0, y: -25, backgroundColor: "#15183F" }
+};
+
 const Navbar = () => {
 
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const update = () => {
+    if (scrollY?.current < scrollY?.prev) {
+      setHidden(false);
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setHidden(true);
+    }
+  }
+
+  useMotionValueEvent(scrollY, "change", () => {
+    update()
+  })
 
   const openMenu = () => {
     setMenuOpen(true);
@@ -37,28 +58,40 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`${styles.navbar} ${alexandria.className}`}>
-      {/* <div className={`navbar-menu ${isMenuOpen ? 'is-active' : ''}`}>
-        <Link href="/" >Home</Link>
-        <Link href="/" >Home</Link>
-        <Link href="/" >Home</Link>
-      </div> */}
-      <div className={`${styles.star} ${styles.starLight} ${isMenuOpen ? styles.starExpanding : styles.starRotating}`} onClick={openMenu}>
-      </div>
-      <div className={`${styles.menuMobile} ${isMenuOpen && styles.menuMobileOpen}`}>
-        <div className={`${styles.star} ${styles.starDark} ${isMenuOpen ? styles.starRotating : styles.starClosing}`} onClick={closeMenu}>
+    <Wrapper>
+      <motion.nav 
+        className={`${styles.navbar} ${alexandria.className}`} 
+        variants={variants}
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
+        <div className={styles.menuDesktop}>
+          <Logo />
+          <ul className={`${styles.navDesktop} ${jura.className}`}>
+            <li><Link href="/omnie" >o mnie</Link></li>
+            <li><Link href="/lekcje-spiewu" >lekcje śpiewu</Link></li>
+            <li><Link href="/cennik" >cennik</Link></li>
+            <li><Link href="/kontakt" >kontakt</Link></li>
+          </ul>
         </div>
-        <motion.ul className={styles.navMobile} variants={container}
-          initial="hidden"
-          animate={isMenuOpen ? "show" : "hide"}>
-          <motion.li variants={item}><Link href="/omnie" >o mnie</Link></motion.li>
-          <motion.li variants={item}><Link href="/oferta" >oferta</Link></motion.li>
-          <motion.li variants={item}><Link href="/cennik" >cennik</Link></motion.li>
-          <motion.li variants={item}><Link href="/kontakt" >kontakt</Link></motion.li>
-        </motion.ul>
-        {/* dać tu cta button */}
-      </div>
-    </nav>
+
+        <div className={`${styles.star} ${styles.starLight} ${isMenuOpen ? styles.starExpanding : styles.starRotating}`} onClick={openMenu}>
+        </div>
+        <div className={`${styles.menuMobile} ${isMenuOpen && styles.menuMobileOpen}`}>
+          <Logo />
+          <div className={`${styles.star} ${styles.starDark} ${isMenuOpen ? styles.starRotating : styles.starClosing}`} onClick={closeMenu}>
+          </div>
+          <motion.ul className={styles.navMobile} variants={container}
+            initial="hidden"
+            animate={isMenuOpen ? "show" : "hide"}>
+            <motion.li variants={item}><Link href="/omnie" >o mnie</Link></motion.li>
+            <motion.li variants={item}><Link href="/lekcje-spiewu" >lekcje śpiewu</Link></motion.li>
+            <motion.li variants={item}><Link href="/cennik" >cennik</Link></motion.li>
+            <motion.li variants={item}><Link href="/kontakt" >kontakt</Link></motion.li>
+          </motion.ul>
+          {/* dać tu cta button */}
+        </div>
+      </motion.nav>
+    </Wrapper>
   );
 };
 

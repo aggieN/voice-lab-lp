@@ -84,6 +84,10 @@
       width: fit-content;
       background-color: $color-white;
       margin-bottom: 14px;
+      padding: 6px 10px;
+      transform: skew(-15deg);
+      box-shadow: -8px -8px 0px -3px $color-bouquet;
+
 
       &:last-of-type {
         margin-bottom: 0;
@@ -164,25 +168,16 @@
     @include button;
     margin-top: 30px;
     display: block;
-    font-size: 14px;
     z-index: 3;
   }
 
   @media (min-width: $break-lg) {
-    font-size: 16px;
     margin-top: 60px;
-  }
-
-  @media (min-width: $break-lg) {
-    font-size: 20px;
-    padding: 30px 40px;
-    border-radius: 44px;
   }
 }
 
 .buttonMobile {
   @include button;
-  font-size: 12px;
 
   @media (min-width: $break-md) {
     display: none;
