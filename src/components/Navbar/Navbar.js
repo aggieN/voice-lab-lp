@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Wrapper from '@/components/Wrapper/Wrapper';
 import Logo from '@/components/Logo/Logo'
 
-import { alexandria, jura, kufam } from "@/utils/fonts";
+import { alexandria, jura } from "@/utils/fonts";
 import * as styles from './Navbar.module.scss';
 
 const container = {
@@ -59,8 +59,8 @@ const Navbar = () => {
 
   return (
     <Wrapper>
-      <motion.nav 
-        className={`${styles.navbar} ${alexandria.className}`} 
+      <motion.nav
+        className={`${styles.navbar} ${alexandria.className}`}
         variants={variants}
         animate={hidden ? "hidden" : "visible"}
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
@@ -77,7 +77,12 @@ const Navbar = () => {
         <div className={`${styles.star} ${styles.starLight} ${isMenuOpen ? styles.starExpanding : styles.starRotating}`} onClick={openMenu}>
         </div>
         <div className={`${styles.menuMobile} ${isMenuOpen && styles.menuMobileOpen}`}>
-          <Logo />
+          <motion.div 
+            variants={item} 
+            initial="hidden" 
+            animate={isMenuOpen ? "show" : "hide"}
+            transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6, delay: 1.2 }}
+          ><Logo /></motion.div>
           <div className={`${styles.star} ${styles.starDark} ${isMenuOpen ? styles.starRotating : styles.starClosing}`} onClick={closeMenu}>
           </div>
           <motion.ul className={styles.navMobile} variants={container}

@@ -1,0 +1,117 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.aboutMeYT {
+  padding: 80px 0 0;
+
+  @media (min-width: $break-sm) {
+    padding: 60px 0 16px;
+  }
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 0;
+
+  @media (min-width: $break-sm) {
+    padding: 60px 0 16px;
+  }
+
+  @media (min-width: $break-md) {
+    flex-direction: row;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $break-md) {
+    width: 50%;
+    padding-top: 80px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+
+  @media (min-width: $break-md) {
+    font-size: 34px;
+  }
+
+  @media (min-width: $break-lg) {
+    margin-bottom: 30px;
+  }
+
+  & span {
+    display: block;
+    width: fit-content;
+    background-color: $color-white;
+    padding: 6px 10px;
+    transform: skew(-15deg);
+    box-shadow: -8px -8px 0px -3px $color-bunting;
+  }
+}
+
+.description {
+  font-size: 16px;
+  color: $color-bunting;
+  line-height: 1.5;
+
+  @media (min-width: $break-sm) {
+    font-size: 18px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $break-xl) {
+    font-size: 22px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.imageWrapper {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $break-md) {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+.imageMobile {
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $break-sm) {
+    display: none;
+  }
+
+}
+
+.imageDesktop {
+  display: none;
+
+  @media (min-width: $break-sm) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

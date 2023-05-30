@@ -168,20 +168,9 @@
   span {
     display: inline-block;
     transition: transform .6s .1s linear;
-
-    &:first-of-type {
-      transform: rotate(10deg);
-    }
-
-    &:nth-child(2) {
-      transform: rotate(-15deg);
-      transform-origin: 30%;
-    }
-
-    &:last-child {
-      margin-left: 4px;
-      transform: rotate(8deg);
-    }
+    transform: rotate(-10deg);
+    transform-origin: 30%;
+    margin-right: 5px;
   }
 
   &:hover {
