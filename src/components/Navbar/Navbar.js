@@ -58,12 +58,13 @@ const Navbar = () => {
 
 
   return (
-    <Wrapper>
-      <motion.nav
-        className={`${styles.navbar} ${alexandria.className}`}
-        variants={variants}
-        animate={hidden ? "hidden" : "visible"}
-        transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
+
+    <motion.nav
+      className={`${styles.navbar} ${alexandria.className}`}
+      variants={variants}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}>
+      <Wrapper>
         <div className={styles.menuDesktop}>
           <Logo />
           <ul className={`${styles.navDesktop} ${jura.className}`}>
@@ -77,26 +78,28 @@ const Navbar = () => {
         <div className={`${styles.star} ${styles.starLight} ${isMenuOpen ? styles.starExpanding : styles.starRotating}`} onClick={openMenu}>
         </div>
         <div className={`${styles.menuMobile} ${isMenuOpen && styles.menuMobileOpen}`}>
-          <motion.div 
-            variants={item} 
-            initial="hidden" 
+          <motion.div
+            variants={item}
+            initial="hidden"
             animate={isMenuOpen ? "show" : "hide"}
             transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6, delay: 1.2 }}
-          ><Logo /></motion.div>
+          >
+            <Logo onClick={() => setMenuOpen(false)}/>
+          </motion.div>
           <div className={`${styles.star} ${styles.starDark} ${isMenuOpen ? styles.starRotating : styles.starClosing}`} onClick={closeMenu}>
           </div>
           <motion.ul className={styles.navMobile} variants={container}
             initial="hidden"
             animate={isMenuOpen ? "show" : "hide"}>
-            <motion.li variants={item}><Link href="/omnie" >o mnie</Link></motion.li>
-            <motion.li variants={item}><Link href="/lekcje-spiewu" >lekcje śpiewu</Link></motion.li>
-            <motion.li variants={item}><Link href="/cennik" >cennik</Link></motion.li>
-            <motion.li variants={item}><Link href="/kontakt" >kontakt</Link></motion.li>
+            <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/omnie" >o mnie</Link></motion.li>
+            <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/lekcje-spiewu" >lekcje śpiewu</Link></motion.li>
+            <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/cennik" >cennik</Link></motion.li>
+            <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/kontakt" >kontakt</Link></motion.li>
           </motion.ul>
           {/* dać tu cta button */}
         </div>
-      </motion.nav>
-    </Wrapper>
+      </Wrapper>
+    </motion.nav>
   );
 };
 

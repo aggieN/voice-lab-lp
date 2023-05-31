@@ -1,4 +1,4 @@
-import { Alexandria, Jura, Kufam } from "next/font/google";
+import { Alexandria, Jura, Kufam, Red_Hat_Display } from "next/font/google";
 
 export const alexandria = Alexandria({
   subsets: ['latin-ext'],
@@ -8,6 +8,11 @@ export const alexandria = Alexandria({
 export const jura = Jura({
   subsets: ['latin-ext'],
   weight: ['400', '600', '700']
+})
+
+export const redHatDisplay = Red_Hat_Display({
+  subsets: ['latin-ext'],
+  weight: ['400', '600']
 })
 
 export const kufam = Kufam({
