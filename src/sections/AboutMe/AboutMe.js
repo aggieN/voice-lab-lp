@@ -9,7 +9,7 @@ const AboutMe = () => {
   return (
     <section>
       {ABOUT_ME_DATA.map(({ title, text, image }) =>
-        <div className={styles.aboutMe}>
+        <div className={styles.aboutMe} key={title}>
           <div className={styles.contentWrapper}>
             <h2 className={`${styles.title} ${alexandria.className}`}><span>{title}</span></h2>
             <p className={`${styles.description} ${redHatDisplay.className}`} dangerouslySetInnerHTML={{ __html: text }}></p>
@@ -27,7 +27,7 @@ const AboutMe = () => {
           <h2 className={`${styles.title} ${alexandria.className}`}><span>{ABOUT_ME_DATA_YOUTUBE.title}</span></h2>
           <p className={`${styles.description} ${redHatDisplay.className}`} dangerouslySetInnerHTML={{ __html: ABOUT_ME_DATA_YOUTUBE.text }}></p>
         </div>
-        <div className={styles.youtubeWrapper}>{ABOUT_ME_DATA_YOUTUBE.youtube.map((item) => <div dangerouslySetInnerHTML={{ __html: item }}></div>)}</div>
+        <div className={styles.youtubeWrapper}>{ABOUT_ME_DATA_YOUTUBE.youtube.map((item, index) => <div dangerouslySetInnerHTML={{ __html: item }} key={index}></div>)}</div>
       </div>
       <div className={styles.aboutMe}>
         <div className={styles.contentWrapper}>
