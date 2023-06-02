@@ -1,0 +1,160 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.container {
+  padding: 60px 10px;
+  color: $color-bunting;
+  line-height: 1.5;
+
+  @media (min-width: $break-sm) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: $break-md) {
+    padding: 80px 20px;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 100px 20px;
+  }
+
+}
+
+.textWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $break-md) {
+    flex-direction: row;
+  }
+
+  .leftCol {
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+
+
+    @media (min-width: $break-sm) {
+      font-size: 22px;
+    }
+
+
+    @media (min-width: $break-md) {
+      flex-direction: column;
+      font-size: 26px;
+      width: 45%;
+    }
+
+    @media (min-width: $break-lg) {
+      font-size: 36px;
+      width: 50%;
+    }
+
+    @media (min-width: $break-xl) {
+      font-size: 46px;
+    }
+
+    & span {
+
+      &:first-of-type {
+        margin-right: 4px;
+
+        @media (min-width: $break-md) {
+          margin-right: 0;
+        }
+      }
+
+    }
+  }
+
+  .rightCol {
+    width: 100%;
+    font-size: 14px;
+
+    @media (min-width: $break-sm) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $break-md) {
+      width: 55%;
+    }
+
+    @media (min-width: $break-lg) {
+      font-size: 20px;
+      width: 50%;
+    }
+
+    @media (min-width: $break-xl) {
+      font-size: 22px;
+    }
+  }
+}
+
+.ctaContainer {
+  background-color: $color-bouquet;
+  box-shadow: 0px -7px 0px 2px $color-bunting;
+}
+
+.ctaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 10px;
+  color: $color-white;
+  line-height: 1.5;
+
+  @media (min-width: $break-sm) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: $break-md) {
+    padding: 80px 20px;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 100px 20px;
+  }
+
+  & p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (min-width: $break-sm) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $break-md) {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $break-lg) {
+      font-size: 28px;
+      max-width: 80%;
+    }
+  }
+
+  & button {
+    @include button;
+    border-color: $color-bunting;
+    background-color: $color-bunting;
+    transition: all .3s linear;
+
+    &:hover {
+      box-shadow: -7px -7px 0px -2px $color-vanilla;
+      color: $color-vanilla;
+    }
+
+    &:active {
+      color: $color-bunting;
+      background-color: $color-vanilla;
+    }
+  }
+}

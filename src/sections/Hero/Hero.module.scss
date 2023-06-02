@@ -3,7 +3,7 @@
 
 .hero {
   background-color: $color-bunting;
-  height: 100vh;
+  height: 95vh;
 
   @media (min-width: $break-md) {
     height: 700px;
@@ -100,7 +100,7 @@
   width: 100%;
   max-width: 380px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
   @media (min-width: $break-sm) {
     max-width: 80%;
@@ -109,6 +109,7 @@
   @media (min-width: $break-md) {
     max-width: 90%;
     margin-top: -120px;
+    justify-content: flex-end;
   }
 
   @media (min-width: $break-lg) {
@@ -123,8 +124,8 @@
 }
 
 .imageMobile {
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
 
   @media (min-width: $break-sm) {
     width: 340px;
@@ -167,16 +168,19 @@
 
   span {
     display: inline-block;
-    transition: transform .6s .1s linear;
-    transform: rotate(-10deg);
-    transform-origin: 30%;
     margin-right: 5px;
+
+    @media (min-width: $break-md) {
+      transition: transform .6s .1s linear;
+      transform: rotate(-10deg);
+      transform-origin: 30%;
+    }
   }
 
   &:hover {
     box-shadow: -7px -7px 0px -2px $color-bouquet;
 
-    span {
+    & span {
       transform: rotate(0);
     }
   }

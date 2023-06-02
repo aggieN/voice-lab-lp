@@ -12,15 +12,16 @@
   border: 1.5px solid $color-white;
   color: $color-white;
   width: fit-content;
-  font-size: 12px;
+  font-size: 16px;
   background-color: transparent;
+  font-weight: 500;
 
-  @media (min-width: $break-md) {
-    font-size: 14px;
+  @media (min-width: $break-sm) {
+    font-size: 16px;
   }
 
   @media (min-width: $break-lg) {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   @media (min-width: $break-lg) {

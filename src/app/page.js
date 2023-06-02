@@ -1,11 +1,12 @@
 import Hero from "@/sections/Hero/Hero";
+import Intro from "@/sections/Intro/Intro"
 
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <div style={{height: '700px', width: '100%'}}></div>
+      <Intro />
     </main>
   )
 }

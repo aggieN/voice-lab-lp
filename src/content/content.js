@@ -2,7 +2,7 @@
 export const ABOUT_ME_DATA = [
   {
     title: 'Front woman',
-    text: 'Mieszkając w Londynie w latach 2016 - 2018 podjęłam współpracę z brytyjską prog-rockową formacją <strong>Touchstone</strong>, której efekty można usłyszeć na EPce <strong>Lights from the sky</strong>. Występuję na niej jako lead vocal oraz autorka tekstów i muzyki. Razem z Touchstone odbyliśmy mini trasę koncertową w Wielkiej Brytanii. Zagraliśmy również na festiwalu charytatywnym Trinity 2 w Leamington Spa oraz na organizowanym przez Planet Rock festiwalu Winter’s End.',
+    text: 'Mieszkając w Londynie w latach 2016 - 2018 podjęłam współpracę z brytyjską prog-rockową formacją <strong>Touchstone</strong>, której efekty można usłyszeć na EPce <strong><a href="https://ditto.fm/lights-from-the-sky-ep" target="_blank">Lights from the sky</a></strong>. Występuję na niej jako lead vocal oraz autorka tekstów i muzyki. Razem z Touchstone odbyliśmy mini trasę koncertową w Wielkiej Brytanii. Zagraliśmy również na festiwalu charytatywnym Trinity 2 w Leamington Spa oraz na organizowanym przez Planet Rock festiwalu Winter’s End.',
     image: {
       mobile: {
         src: '/touchstone-mobile.webp',
