@@ -1,3 +1,5 @@
-const LekcjeSpiewu = () => <div>Lekcje Spiewu</div>
+import Offer from "@/sections/Offer/Offer";
+
+const LekcjeSpiewu = () => <Offer />
 
 export default LekcjeSpiewu;

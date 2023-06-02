@@ -1,0 +1,143 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+@import '@/styles/animations.scss';
+
+.container {
+  padding: 100px 10px 60px;
+  color: $color-bunting;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+
+  @media (min-width: $break-sm) {
+    padding: 80px 40px;
+  }
+
+  @media (min-width: $break-md) {
+    padding: 80px 20px;
+  }
+
+  @media (min-width: $break-lg) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 100px 20px;
+  }
+
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  z-index: 3;
+
+  @media (min-width: $break-md) {
+    font-size: 34px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 40px;
+  }
+
+  & span {
+    display: block;
+    width: fit-content;
+    background-color: $color-white;
+    padding: 6px 10px;
+    transform: skew(-15deg);
+    box-shadow: -8px -8px 0px -3px $color-bouquet;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
+  @media (min-width: $break-lg) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.text {
+  font-size: 18px;
+
+  @media (min-width: $break-md) {
+    font-size: 26px;
+  }
+
+  @media (min-width: $break-lg) {
+    padding-right: 40px;
+  }
+
+}
+
+.imageRight {
+  @include gif;
+}
+
+.ctaContainer {
+  padding: 0 10px 80px;
+  color: $color-bunting;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+
+  @media (min-width: $break-sm) {
+    padding: 0 40px 80px;
+  }
+
+  // @media (min-width: $break-md) {
+  //   padding: 80px 20px;
+  // }
+
+  @media (min-width: $break-lg) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 0 20px 100px;
+  }
+
+  & button {
+    @include button;
+    margin-top: 40px;
+    align-self: center;
+    border-color: $color-bunting;
+    background-color: $color-bunting;
+    transition: all .3s linear;
+
+    &:hover {
+      box-shadow: -7px -7px 0px -2px $color-bouquet;
+      color: $color-vanilla;
+    }
+
+    &:active {
+      color: $color-white;
+      border-color: $color-white;
+      background-color: $color-bouquet;
+    }
+  }
+}
+
+.ctaText {
+  display: block;
+  margin-bottom: 16px;
+
+  & a {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}

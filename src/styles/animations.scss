@@ -65,3 +65,17 @@
   @include animate(open, .7s, ease-out, 1);
   animation-fill-mode: both;
 }
+
+@mixin gif {
+  @include keyframes(wiggle) {
+    0%, 100% {
+      transform: rotateZ(-5deg);
+    }
+    50% {
+      transform: rotateZ(5deg);
+    }
+  }
+
+  @include animate(wiggle, 1.5s, linear, infinite);
+  animation-fill-mode: both;
+}
