@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $break-xl) {
-    padding: 100px 20px;
+    padding: 100px 20px 0;
   }
 
 }
@@ -44,6 +44,7 @@
 
   @media (min-width: $break-lg) {
     font-size: 40px;
+    margin-bottom: 0;
   }
 
   & span {
@@ -73,11 +74,15 @@
   font-size: 18px;
 
   @media (min-width: $break-md) {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   @media (min-width: $break-lg) {
     padding-right: 40px;
+  }
+
+  @media (min-width: $break-xl) {
+    padding-right: 60px;
   }
 
 }
@@ -99,9 +104,9 @@
     padding: 0 40px 80px;
   }
 
-  // @media (min-width: $break-md) {
-  //   padding: 80px 20px;
-  // }
+  @media (min-width: $break-md) {
+    padding: 0 20px 80px;
+  }
 
   @media (min-width: $break-lg) {
     align-items: flex-start;
