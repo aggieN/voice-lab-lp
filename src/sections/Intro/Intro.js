@@ -23,7 +23,7 @@ const Intro = () => {
       <div className={styles.ctaContainer}>
         <Wrapper>
           <div className={styles.ctaWrapper}>
-            <p className={redHatDisplay.className}>Jeśli jesteś zainteresowana albo zainteresowany rozpoczęciem nauki śpiewu, ale masz pytania lub wątpliwości zapraszam Cię na 20 minut darmowej konsultacji online. Jest to okazja, żeby się poznać i opowiedzieć o swoich doświadczeniach oraz oczekiwaniach.</p>
+            <p className={redHatDisplay.className}>Jeśli jesteś zainteresowana albo zainteresowany rozpoczęciem nauki śpiewu, ale masz pytania lub wątpliwości zapraszam Cię na 20 minut darmowej konsultacji online. To dobra okazja, żeby się poznać i opowiedzieć o swoich doświadczeniach oraz oczekiwaniach.</p>
             <button className={jura.className}>zapisz się na darmową konsultację</button>
           </div>
         </Wrapper>
