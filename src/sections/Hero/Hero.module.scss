@@ -164,7 +164,7 @@
 
 .button {
   cursor: pointer;
-  transition: all 1s ease-in;
+  transition: all .5s ease-out;
 
   span {
     display: inline-block;

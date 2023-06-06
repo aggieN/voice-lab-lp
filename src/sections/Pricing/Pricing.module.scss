@@ -67,7 +67,7 @@
 
 .box {
   width: 300px;
-  height: 300px;
+  height: 360px;
   margin-bottom: 80px;
   position: relative;
 
@@ -124,6 +124,7 @@
   font-weight: 500;
   text-align: center;
   max-width: 300px;
+  margin-bottom: 20px;
 }
 
 
@@ -225,25 +226,25 @@
       }
     }
   }
+}
 
-  & button {
-    @include button;
-    background-color: $color-bunting;
-    cursor: pointer;
-    transition: all 1s ease-in;
+.button {
+  @include button;
+  background-color: $color-bunting;
+  cursor: pointer;
+  transition: all .5s ease-out;
 
-    @media (min-width: $break-xl) {
-      font-size: 18px;
-      padding: 20px 30px;
-    }
+  @media (min-width: $break-xl) {
+    font-size: 18px;
+    padding: 20px 30px;
+  }
 
-    &:hover {
-      box-shadow: -7px -7px 0px -2px $color-bouquet;
-    }
+  &:hover {
+    box-shadow: -7px -7px 0px -2px $color-bouquet;
+  }
 
-    &:active {
-      background-color: $color-bouquet;
-      transition: all .3s linear;
-    }
+  &:active {
+    background-color: $color-bouquet;
+    transition: all .3s linear;
   }
 }

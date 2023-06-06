@@ -18,6 +18,7 @@ const Pricing = () => {
                 <p className={styles.text}>50 minut</p>
                 <p className={styles.price}>150zł</p>
                 <p className={styles.additionalText}>stacjonarnie lub online</p>
+                <Link href="/kontakt"><button className={`${jura.className} ${styles.button}`}>umów się na lekcję</button></Link>
               </div>
             </div>
             <div className={styles.box}>
@@ -25,6 +26,7 @@ const Pricing = () => {
                 <p className={styles.text}>4 lekcje x 50 min*</p>
                 <p className={styles.price}>520zł</p>
                 <p className={styles.additionalText}>*płatność z góry do wykorzystania w ciągu miesiąca</p>
+                <Link href="/kontakt"><button className={`${jura.className} ${styles.button}`}>umów się na lekcję</button></Link>
               </div>
             </div>
           </div>
@@ -46,7 +48,7 @@ const Pricing = () => {
               <div className={styles.boxInner}>
                 <p className={styles.text}><Link href="/kontakt">Umów się na lekcję</Link> lub skorzystaj z 20 minutowej darmowej konsultacji.
                 </p>
-                <button className={jura.className}>zapisz się na darmową konsultację</button>
+                <Link href="/kontakt#konsultacja"><button className={`${jura.className} ${styles.button}`}>zapisz się na darmową konsultację</button></Link>
               </div>
             </div>
           </div>
