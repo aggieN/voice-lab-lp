@@ -1,3 +1,5 @@
-const Kontakt = () => <div>Kontakt</div>
+import Contact from "@/sections/Contact/Contact";
+
+const Kontakt = () => <Contact />
 
 export default Kontakt;

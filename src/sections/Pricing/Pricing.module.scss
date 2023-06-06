@@ -1,0 +1,249 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.container {
+  padding: 60px 0;
+  color: $color-bunting;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $break-sm) {
+    padding: 60px 10px;
+  }
+
+  @media (min-width: $break-md) {
+    padding: 80px 20px;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 100px 20px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  z-index: 3;
+
+  @media (min-width: $break-md) {
+    font-size: 34px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+
+  & span {
+    display: block;
+    width: fit-content;
+    background-color: $color-white;
+    padding: 6px 10px;
+    transform: skew(-15deg);
+    box-shadow: -8px -8px 0px -3px $color-bunting;
+  }
+}
+
+.boxes {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $break-md) {
+    margin-top: 100px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 80px;
+  position: relative;
+
+  @media (min-width: $break-lg) {
+    width: 460px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-bunting;
+    transform: rotate(10deg);
+  }
+}
+
+.boxInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: $color-white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  @media (min-width: $break-sm) {
+    padding: 40px;
+  }
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.additionalText {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  max-width: 300px;
+}
+
+
+
+.ctaContainer {
+  width: 100%;
+  background-color: $color-bouquet;
+}
+
+.ctaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px;
+  line-height: 1.5;
+  font-size: 16px;
+
+
+  @media (min-width: $break-sm) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: $break-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 18px;
+  }
+}
+
+.payment {
+  width: 100%;
+  color: $color-white;
+
+  @media (min-width: $break-md) {
+    margin-top: 60px;
+    width: 40%;
+  }
+
+  & ul {
+    list-style: none;
+    font-weight: 400;
+    margin-bottom: 16px;
+
+    & li {
+
+      & span {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.info {
+  margin-top: 80px;
+
+  @media (min-width: $break-md) {
+    margin-top: 40px;
+  }
+
+  .box {
+
+    .boxInner {
+      justify-content: space-around;
+    }
+
+    @media (min-width: $break-sm) {
+      width: 380px;
+      height: 360px;
+    }
+
+    @media (min-width: $break-lg) {
+      width: 460px;
+    }
+
+    &::before {
+      background-color: $color-bunting;
+    }
+
+    .text {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @media (min-width: $break-sm) {
+        font-size: 20px;
+      }
+
+      @media (min-width: $break-md) {
+        font-size: 22px;
+      }
+
+      @media (min-width: $break-lg) {
+        font-size: 24px;
+      }
+
+      & a {
+        text-decoration: underline
+      }
+    }
+  }
+
+  & button {
+    @include button;
+    background-color: $color-bunting;
+    cursor: pointer;
+    transition: all 1s ease-in;
+
+    @media (min-width: $break-xl) {
+      font-size: 18px;
+      padding: 20px 30px;
+    }
+
+    &:hover {
+      box-shadow: -7px -7px 0px -2px $color-bouquet;
+    }
+
+    &:active {
+      background-color: $color-bouquet;
+      transition: all .3s linear;
+    }
+  }
+}

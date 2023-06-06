@@ -1,0 +1,21 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.container {
+  padding: 60px 10px;
+  color: $color-bunting;
+  line-height: 1.5;
+
+  @media (min-width: $break-sm) {
+    padding: 60px 40px;
+  }
+
+  @media (min-width: $break-md) {
+    padding: 80px 20px;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 100px 20px;
+  }
+
+}
