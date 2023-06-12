@@ -23,9 +23,11 @@ const Offer = () => {
         <div className={styles.ctaContainer}>
           <div className={`${styles.text} ${redHatDisplay.className}`}>
             <p className={styles.ctaText}>Lekcje jeden-na-jeden odbywają się w Warszawie (Ursus) albo online.</p>
-            <p className={styles.ctaText}>Masz pytania? <Link href='/kontakt'>Napisz do mnie</Link> albo już teraz umów się na 20 minut darmowej konsultacji online. Do zobaczenia! 🙂</p>
+            <p className={styles.ctaText}>Masz pytania? <Link href='/kontakt'>Napisz do mnie</Link> albo już teraz umów się na 15 minut darmowej konsultacji online. Do zobaczenia! 🙂</p>
           </div>
-          <button className={jura.className}>zapisz się na darmową konsultację</button>
+          <Link href="/konsultacja">
+            <button className={jura.className}>zapisz się na darmową konsultację</button>
+          </Link>
         </div>
       </Wrapper>
     </section>

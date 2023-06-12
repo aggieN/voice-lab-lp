@@ -7,7 +7,7 @@ import { ABOUT_ME_DATA, ABOUT_ME_DATA_YOUTUBE, ABOUT_ME_EDUCATION } from '@/cont
 
 const AboutMe = () => {
   return (
-    <section>
+    <section className={styles.section}>
       {ABOUT_ME_DATA.map(({ title, text, image }) =>
         <div className={styles.aboutMe} key={title}>
           <div className={styles.contentWrapper}>

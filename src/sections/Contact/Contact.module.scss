@@ -38,7 +38,6 @@
 
   @media (min-width: $break-lg) {
     font-size: 40px;
-    margin-bottom: 0;
   }
 
   & span {
@@ -51,11 +50,64 @@
   }
 }
 
-.left {
-  width: 100%;
+.text {
+  font-size: 18px;
+  margin-top: 40px;
+  max-width: 465px;
 
   @media (min-width: $break-md) {
+    font-size: 22px;
+  } 
+}
+
+.social {
+  margin-top: 40px;
+
+  @media (min-width: $break-lg) {
+    margin-top: 60px;
+  }
+}
+
+.icon {
+  margin: 16px 0;
+
+  &:hover {
+    fill: $color-bouquet;
+  }
+}
+
+.button {
+  @include button;
+  background-color: $color-bunting;
+  cursor: pointer;
+  transition: all .5s ease-out;
+
+  @media (min-width: $break-xl) {
+    font-size: 18px;
+    padding: 20px 30px;
+  }
+
+  &:hover {
+    box-shadow: -7px -7px 0px -2px $color-bouquet;
+  }
+
+  &:active {
+    background-color: $color-bouquet;
+    transition: all .3s linear;
+  }
+}
+
+.left {
+  width: 100%;
+  
+  @media (min-width: $break-md) {
     width: 40%;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $break-lg) {
+    width: 50%;
+    padding-right: 40px;
   }
 }
 
@@ -65,6 +117,10 @@
 
   @media (min-width: $break-md) {
     width: 60%;
+  }
+
+  @media (min-width: $break-lg) {
+    width: 50%;
   }
 }
 
@@ -89,6 +145,10 @@
       transform: rotate(10deg);
     }
   }
+}
+
+.iconsWrapper {
+  margin-top: 24px;
 }
 
 .form {

@@ -1,5 +1,8 @@
 "use client"
 
+import Image from 'next/image';
+import Link from 'next/link';
+
 import Wrapper from '@/components/Wrapper/Wrapper';
 
 import { useForm, ValidationError } from '@formspree/react';
@@ -8,6 +11,7 @@ import { redHatDisplay, alexandria, jura } from "@/utils/fonts";
 
 import * as styles from './Contact.module.scss'
 import { useEffect, useState } from 'react';
+import SocialIcons from '@/components/SocialIcons/SocialIcons';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xyyaqdbr");
@@ -44,7 +48,7 @@ const Contact = () => {
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
   }
-  
+
   return (
     <section>
       <Wrapper>
@@ -52,6 +56,15 @@ const Contact = () => {
 
           <div className={styles.left}>
             <h1 className={`${styles.title} ${alexandria.className}`}><span>Kontakt</span></h1>
+            <div className={styles.social}>
+              <p className={`${styles.text} ${redHatDisplay.className}`}>Napisz do mnie tutaj lub skontaktuj się poprzez moje social media</p>
+              <div className={styles.iconsWrapper}>
+                <SocialIcons variant="dark" />
+              </div>
+            </div>
+            <div><p className={`${styles.text} ${redHatDisplay.className}`}>Jeśli chcesz mnie lepiej poznać zanim się zdecydujesz, skorzystaj z darmowej konsultacji</p>
+              <Link href="/konsultacja"><button className={`${jura.className} ${styles.button}`}>zapisz się na darmową konsultację</button></Link>
+            </div>
           </div>
           <div className={styles.right}>
             <div className={styles.formWrapper}>

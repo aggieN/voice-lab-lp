@@ -1,6 +1,10 @@
 @import '@/styles/variables.scss';
 @import '@/styles/mixins.scss';
 
+.section {
+  padding-bottom: 60px;
+}
+
 .aboutMeYT {
   padding: 80px 0 0;
   position: relative;

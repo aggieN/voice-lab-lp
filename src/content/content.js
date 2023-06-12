@@ -58,3 +58,22 @@ export const ABOUT_ME_EDUCATION = {
     }
   },
 }
+
+export const SOCIAL_ICONS = [
+  {
+    src: '/facebook-svgrepo-com',
+    link: 'https://www.facebook.com/profile.php?id=100063655717945'
+  },
+  {
+    src: '/tiktok-svgrepo-com',
+    link: 'https://www.tiktok.com/@aggies_voice'
+  },
+  {
+    src: '/instagram-alt-svgrepo-com',
+    link: 'https://www.instagram.com/aggie_figurska/'
+  },
+  {
+    src: '/youtube-svgrepo-com',
+    link: 'https://www.youtube.com/channel/UCdtZsIUE8Fbrc5WxDaVvHVg'
+  },
+]

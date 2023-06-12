@@ -163,6 +163,7 @@
 }
 
 .button {
+  @include button;
   cursor: pointer;
   transition: all .5s ease-out;
 
@@ -196,7 +197,6 @@
   display: none;
 
   @media (min-width: $break-md) {
-    @include button;
     margin-top: 30px;
     display: block;
     z-index: 3;
@@ -208,7 +208,7 @@
 }
 
 .buttonMobile {
-  @include button;
+  display: block;
 
   @media (min-width: $break-md) {
     display: none;

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Wrapper from '@/components/Wrapper/Wrapper';
 
 import { redHatDisplay, alexandria, jura } from "@/utils/fonts";
@@ -23,8 +25,8 @@ const Intro = () => {
       <div className={styles.ctaContainer}>
         <Wrapper>
           <div className={styles.ctaWrapper}>
-            <p className={redHatDisplay.className}>Jeśli jesteś zainteresowana albo zainteresowany rozpoczęciem nauki śpiewu, ale masz pytania lub wątpliwości zapraszam Cię na 20 minut darmowej konsultacji online. To dobra okazja, żeby się poznać i opowiedzieć o swoich doświadczeniach oraz oczekiwaniach.</p>
-            <button className={jura.className}>zapisz się na darmową konsultację</button>
+            <p className={redHatDisplay.className}>Jeśli jesteś zainteresowana albo zainteresowany rozpoczęciem nauki śpiewu, ale masz pytania lub wątpliwości zapraszam Cię na 15 minut darmowej konsultacji online. To dobra okazja, żeby się poznać i opowiedzieć o swoich doświadczeniach oraz oczekiwaniach.</p>
+            <Link href="/konsultacja"><button className={jura.className}>zapisz się na darmową konsultację</button></Link>
           </div>
         </Wrapper>
       </div>

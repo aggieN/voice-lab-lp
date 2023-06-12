@@ -8,6 +8,7 @@ import Logo from '@/components/Logo/Logo'
 
 import { alexandria, jura } from "@/utils/fonts";
 import * as styles from './Navbar.module.scss';
+// import SocialIcons from '../SocialIcons/SocialIcons';
 
 const container = {
   hidden: { opacity: 0 },
@@ -82,9 +83,9 @@ const Navbar = () => {
             variants={item}
             initial="hidden"
             animate={isMenuOpen ? "show" : "hide"}
-            transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6, delay: 1.2 }}
+            transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6, delay: 1 }}
           >
-            <Logo onClick={() => setMenuOpen(false)}/>
+            <Logo onClick={() => setMenuOpen(false)} />
           </motion.div>
           <div className={`${styles.star} ${styles.starDark} ${isMenuOpen ? styles.starRotating : styles.starClosing}`} onClick={closeMenu}>
           </div>
@@ -96,7 +97,9 @@ const Navbar = () => {
             <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/cennik" >cennik</Link></motion.li>
             <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/kontakt" >kontakt</Link></motion.li>
           </motion.ul>
-          {/* dać tu cta button */}
+          {/* <div className={styles.socials}>
+            <SocialIcons variant="light" />
+          </div> */}
         </div>
       </Wrapper>
     </motion.nav>
