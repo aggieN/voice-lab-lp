@@ -74,6 +74,6 @@ export const SOCIAL_ICONS = [
   },
   {
     src: '/youtube-svgrepo-com',
-    link: 'https://www.youtube.com/channel/UCdtZsIUE8Fbrc5WxDaVvHVg'
+    link: 'https://www.youtube.com/@aggie1223/videos'
   },
 ]
