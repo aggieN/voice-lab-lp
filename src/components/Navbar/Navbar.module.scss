@@ -6,20 +6,6 @@
   position: relative;
   width: 100%;
   height: 0;
-
-  @media (min-width: $break-lg) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: $navbar-height;
-    padding: 0 22px;
-    background-color: $color-vanilla;
-    z-index: 6;
-  }
-
-  @media (min-width: $break-2xl) {
-    left: initial;
-  }
 }
 
 .star {
@@ -28,25 +14,68 @@
   top: 20px;
   z-index: 4;
 
-  &Light {
-    @include star(70px, $color-jordy-blue);
-  }
+  .hamburger {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
 
-  &Dark {
-    @include star(70px, $color-bunting);
-    transition: all .4s ease-in;
+    & span {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 17px;
+      height: 2px;
+      background-color: $color-bunting;
+      z-index: 6;
 
-    &:hover {
-      background-color: $color-vanilla;
+      &:nth-child(2) {
+        top: 52%;
+      }
+
+      &:nth-child(3) {
+        top: 59%;
+      }
     }
   }
 
-  &Rotating {
-    @include rotation;
+  &Light {
+    @include star(80px, $color-jordy-blue);
   }
+
+  &Dark {
+    @include star(80px, $color-bunting);
+    transition: all .4s ease-in;
+
+    .hamburger {
+      & span {
+        background-color: $color-vanilla;
+      }
+    }
+
+    &:hover {
+      background-color: $color-vanilla;
+
+      .hamburger {
+        & span {
+          background-color: $color-bunting;
+        }
+      }
+    }
+  }
+
+  // &Rotating {
+  //   @include rotation;
+  // }
 
   &Expanding {
     @include opening;
+
+    .hamburger {
+      display: none;
+    }
   }
 
   &:active {
@@ -114,6 +143,22 @@
   }
 }
 
+.menuDesktopWrapper {
+  display: none;
+
+  @media (min-width: $break-lg) {
+    display: block;
+    width: 100%;
+    background-color: $color-vanilla;
+    height: $navbar-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 22px;
+    z-index: 6;
+  }
+}
+
 .menuDesktop {
   display: none;
 
@@ -123,6 +168,10 @@
     align-items: center;
     width: 100%;
     height: 100%;
+  }
+
+  @media (min-width: $break-2xl) {
+    left: initial;
   }
 }
 
