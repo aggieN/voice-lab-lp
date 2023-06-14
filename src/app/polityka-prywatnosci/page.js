@@ -1,4 +1,5 @@
+import Privacy from "@/sections/PrivacyPolicy/PrivacyPolicy";
 
-const PrivacyPolicy = () => <div></div>
+const PrivacyPolicy = () => <Privacy />
 
 export default PrivacyPolicy;
