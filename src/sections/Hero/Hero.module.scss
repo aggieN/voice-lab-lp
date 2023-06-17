@@ -3,14 +3,46 @@
 
 .hero {
   background-color: $color-bunting;
-  height: 95vh;
+  height: 78vh;
 
   @media (min-width: $break-md) {
     height: 700px;
+    background-image: none;
   }
 
   @media (min-width: $break-lg) {
     height: fit-content;
+  }
+}
+
+.heroMobile {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  @media (min-width: $break-md) {
+    display: none;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(21,24,63,1) 0%, rgba(21,24,63,0.4) 30%, rgba(21,24,63,0.4) 60%, rgba(21,24,63,1) 100%);
+
+  width: 100%;
+  height: 100%;
+}
+
+.heroDesktop {
+  display: none;
+
+  @media (min-width: $break-md) {
+    display: block;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -20,7 +52,12 @@
   align-items: center;
   justify-content: space-around;
   height: 100%;
-  padding: 60px 0;
+  padding: 30px 0 60px;
+  z-index: 3;
+
+  @media (min-width: $break-md) {
+    padding: 60px 0;
+  }
 
   @media (min-width: $break-lg) {
     flex-direction: row;
@@ -123,30 +160,16 @@
   }
 }
 
-.imageMobile {
-  width: 260px;
-  height: 260px;
-
-  @media (min-width: $break-sm) {
-    width: 340px;
-    height: 340px;
-  }
+.imageDesktop {
+  display: none;
 
   @media (min-width: $break-md) {
+    display: block;
     width: 440px;
     height: 440px;
   }
 
   @media (min-width: $break-lg) {
-    display: none;
-  }
-}
-
-.imageDesktop {
-  display: none;
-
-  @media (min-width: $break-lg) {
-    display: block;
     width: 560px;
     height: 560px;
   }
@@ -209,6 +232,8 @@
 
 .buttonMobile {
   display: block;
+  z-index: 3;
+  background-color: $color-bouquet;
 
   @media (min-width: $break-md) {
     display: none;

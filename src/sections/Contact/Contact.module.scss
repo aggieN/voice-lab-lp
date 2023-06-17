@@ -57,7 +57,7 @@
 
   @media (min-width: $break-md) {
     font-size: 22px;
-  } 
+  }
 }
 
 .social {
@@ -99,7 +99,7 @@
 
 .left {
   width: 100%;
-  
+
   @media (min-width: $break-md) {
     width: 40%;
     padding-right: 20px;
@@ -229,4 +229,20 @@
 
 .textarea {
   min-height: 90px;
+}
+
+.consent {
+  margin-top: 26px;
+
+  &Label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 8px;
+  }
+}
+
+.checkbox {
+  &:focus {
+    background-color: $color-bunting;
+  }
 }

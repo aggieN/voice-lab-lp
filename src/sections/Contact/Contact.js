@@ -99,6 +99,9 @@ const Contact = () => {
                   field="message"
                   errors={state.errors}
                 />
+                {/* <div className={styles.consent}>
+                  <input type="checkbox" id="consent" name="consent" value="consent" className={styles.checkbox} />
+                  <label htmlFor="consent" className={styles.consentLabel}>Wyrażam zgodę na przetwarzanie danych osobowych oraz akceptuję <Link href="/polityka-prywatnosci" target='_blank'>Politykę Prywatności</Link></label></div> */}
                 <button className={`${styles.button} ${jura.className}`} type="submit" disabled={isEmailEmpty || isMessageEmpty || state.submitting}>
                   wyślij
                 </button>

@@ -27,8 +27,8 @@ const item = {
 }
 
 const variants = {
-  visible: { opacity: 1, y: 0, backgroundColor: "#FFF1D7" },
-  hidden: { opacity: 0, y: -25, backgroundColor: "transparent" }
+  visible: { opacity: 1, y: 0},
+  hidden: { opacity: 0, y: -25}
 };
 
 const Navbar = () => {
@@ -78,7 +78,7 @@ const Navbar = () => {
         </Wrapper>
       </motion.div>
 
-      <div className={`${styles.star} ${styles.starLight} ${isMenuOpen ? styles.starExpanding : ''}`} onClick={openMenu}>
+      <div className={`${styles.star} ${styles.starLight} ${isMenuOpen ? styles.starExpanding : styles.starRotating}`} onClick={openMenu}>
         <div className={styles.hamburger}>
           <span></span>
           <span></span>
@@ -94,7 +94,7 @@ const Navbar = () => {
         >
           <Logo onClick={() => setMenuOpen(false)} />
         </motion.div>
-        <div className={`${styles.star} ${styles.starDark} ${isMenuOpen ? '' : styles.starClosing}`} onClick={closeMenu}>
+        <div className={`${styles.star} ${styles.starDark} ${isMenuOpen ? styles.starRotating : styles.starClosing}`} onClick={closeMenu}>
           <div className={styles.hamburger}>
             <span></span>
             <span></span>

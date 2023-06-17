@@ -66,9 +66,9 @@
     }
   }
 
-  // &Rotating {
-  //   @include rotation;
-  // }
+  &Rotating {
+    @include rotation;
+  }
 
   &Expanding {
     @include opening;
