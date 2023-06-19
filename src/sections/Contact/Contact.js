@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 import Wrapper from '@/components/Wrapper/Wrapper';
@@ -11,7 +10,6 @@ import { redHatDisplay, alexandria, jura } from "@/utils/fonts";
 
 import * as styles from './Contact.module.scss'
 import { useEffect, useState } from 'react';
-import SocialIcons from '@/components/SocialIcons/SocialIcons';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xyyaqdbr");
@@ -20,6 +18,11 @@ const Contact = () => {
 
   const [isEmailEmpty, setIsEmailEmpty] = useState(true)
   const [isMessageEmpty, setIsMessageEmpty] = useState(true)
+  const [isChecked, setIsChecked] = useState(false)
+
+  const checkHandler = () => {
+    setIsChecked(!isChecked)
+  }
 
   useEffect(() => {
     if (email.trim().length !== 0) {
@@ -45,10 +48,6 @@ const Contact = () => {
     setEmail(event.target.value);
   };
 
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
-
   return (
     <section>
       <Wrapper>
@@ -58,16 +57,14 @@ const Contact = () => {
             <h1 className={`${styles.title} ${alexandria.className}`}><span>Kontakt</span></h1>
             <div className={styles.social}>
               <p className={`${styles.text} ${redHatDisplay.className}`}>Wypełnij formularz lub napisz do mnie maila na <a href="mailto:aggiesvoicelab@gmail.com">aggiesvoicelab@gmail.com</a></p>
-              {/* <div className={styles.iconsWrapper}>
-                <SocialIcons variant="dark" />
-              </div> */}
             </div>
             <div><p className={`${styles.text} ${redHatDisplay.className}`}>Jeśli chcesz mnie lepiej poznać zanim się zdecydujesz, skorzystaj z darmowej konsultacji</p>
               <Link href="/konsultacja"><button className={`${jura.className} ${styles.button}`}>zapisz się na darmową konsultację</button></Link>
             </div>
           </div>
           <div className={styles.right}>
-            <div className={styles.formWrapper}>
+            <div className={styles.formWrapper}>{state.succeeded ? (<div className={`${styles.thanks} ${redHatDisplay.className}`}><p>Dzięki za wysłanie wiadomości.</p><p>Odezwę się tak szybko jak to będzie możliwe 🙂</p></div>
+            ) : (
               <form className={`${alexandria.className} ${styles.form}`} onSubmit={handleSubmit}>
                 <label htmlFor="email" className={styles.label}>
                   e-mail
@@ -99,20 +96,28 @@ const Contact = () => {
                   field="message"
                   errors={state.errors}
                 />
-                {/* <div className={styles.consent}>
-                  <input type="checkbox" id="consent" name="consent" value="consent" className={styles.checkbox} />
-                  <label htmlFor="consent" className={styles.consentLabel}>Wyrażam zgodę na przetwarzanie danych osobowych oraz akceptuję <Link href="/polityka-prywatnosci" target='_blank'>Politykę Prywatności</Link></label></div> */}
-                <button className={`${styles.button} ${jura.className}`} type="submit" disabled={isEmailEmpty || isMessageEmpty || state.submitting}>
+                <div className={styles.consent}>
+                  <label className={styles.checkboxControl}>
+                    <input type="checkbox"
+                      checked={isChecked}
+                      onChange={checkHandler}
+                      className={styles.checkbox} />
+                    <span>Wyrażam zgodę na przetwarzanie moich danych osobowych w sposób wskazany w <Link href="/polityka-prywatnosci" target='_blank'>Polityce Prywatności</Link></span>
+                  </label>
+                </div>
+                <button className={`${styles.button} ${jura.className}`} type="submit" disabled={isEmailEmpty || isMessageEmpty || !isChecked || state.submitting}>
                   wyślij
                 </button>
               </form>
+            )}
+
             </div>
           </div>
         </div>
 
 
       </Wrapper>
-    </section>
+    </section >
   );
 }
 export default Contact;
