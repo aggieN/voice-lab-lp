@@ -1,0 +1,135 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.container {
+  padding: 30px 10px;
+  color: $color-bunting;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $break-sm) {
+    padding: 30px 40px;
+  }
+
+  @media (min-width: $break-md) {
+    padding: 80px 20px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 100px 20px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+
+  @media (min-width: $break-sm) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $break-md) {
+    font-size: 26px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  margin-bottom: 30px;
+
+  @media (min-width: $break-sm) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $break-xl) {
+    font-size: 22px;
+  }
+}
+
+.textWrapper {
+  width: 100%;
+
+  @media (min-width: $break-md) {
+    width: 55%;
+  }
+
+  @media (min-width: $break-lg) {
+    width: 50%;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $break-md) {
+    width: 45%;
+
+    & img {
+      margin-left: -40px;
+    }
+  }
+
+  @media (min-width: $break-lg) {
+    width: 50%;
+  }
+
+  @media (min-width: $break-xl) {
+    & img {
+      margin-left: -120px;
+    }
+  }
+}
+
+.imageMobile {
+  @media (min-width: $break-lg) {
+    display: none;
+  }
+}
+
+.imageDesktop {
+  display: none;
+
+  @media (min-width: $break-lg) {
+    display: block;
+  }
+}
+
+.buttonWrapper {
+  text-align: center;
+
+  @media (min-width: $break-md) {
+    text-align: left;
+  }
+}
+
+.button {
+  @include button;
+  border-color: $color-bunting;
+  background-color: transparent;
+  color: $color-bunting;
+  transition: all .3s linear;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+
+  &:hover {
+    box-shadow: -7px -7px 0px -2px $color-bouquet;
+  }
+
+  &:active {
+    color: $color-vanilla;
+    background-color: $color-bunting;
+    font-weight: 600;
+  }
+}

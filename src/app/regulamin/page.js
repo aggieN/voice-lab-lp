@@ -1,4 +1,4 @@
+import TermsOfService from "@/sections/TermsOfService/TermsOfService";
+const Terms = () => <TermsOfService />
 
-const TermsOfService = () => <div></div>
-
-export default TermsOfService;
+export default Terms;

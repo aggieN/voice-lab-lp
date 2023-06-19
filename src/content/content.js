@@ -47,12 +47,12 @@ export const ABOUT_ME_EDUCATION = {
   text: "Po rozpoczęciu nauki  śpiewu w szkole muzycznej, od razu umieszczono mnie w szufladce z napisem “sopran”. Od zawsze uwielbiałam taniec, więc po kilku latach piwotowałam w kierunku musicalu. Moje doświadczenie w śpiewie klasycznym okazało się atutem, więc dostałam się do Akademii Muzycznej w Gdańsku na specjalność musical. Większość nauczycieli wokalu na mojej uczelni było  śpiewakami operowymi albo w ogóle nie śpiewała. Problem pojawił się w momencie, kiedy zachciało mi się beltingu. Było to wówczas dość egzotyczne zjawisko uznawane  za “dar od bozi” albo zupełnie szkodliwe dla głosu. Postanowiłam poszukać wsparcia poza uczelnią i tym sposobem trafiłam na studia do Complete Vocal Institute w Kopenhadze. Tam poznałam <strong>Complete Vocal Technique</strong>. Największe wrażenie w CVT zrobiło na mnie naukowe, analityczno - anatomiczne podejście do głosu. Jestem nerdem i lubię budować swoje umiejętności w oparciu o coś, co zostało zbadane i przetestowane, dlatego CVT do dziś jest fundamentem mojej techniki.",
   image: {
     mobile: {
-      src: '/certificate-aggie-complete-vocal-technique.webp',
+      src: '/certificate.webp',
       width: 500,
       height: 500,
     },
     desktop: {
-      src: '/certificate-aggie-complete-vocal-technique.webp',
+      src: '/certificate.webp',
       width: 800,
       height: 800,
     }
@@ -79,50 +79,47 @@ export const SOCIAL_ICONS = [
 ]
 
 export const PRIVACY_POLICY = [{
-  title: '1. Informacje ogólne', text: `Niniejsza polityka dotyczy Serwisu www, funkcjonującego pod adresem url: aggiesvoicelab.com<br/>
-Operatorem serwisu oraz Administratorem danych osobowych jest: Agnieszka Niemiec Szeligowska 53 / 64<br/>
-Adres kontaktowy poczty elektronicznej operatora: aggiesvoicelab@gmail.com<br/>
-Operator jest Administratorem Twoich danych osobowych w odniesieniu do danych podanych dobrowolnie w Serwisie.<br/>
-Serwis wykorzystuje dane osobowe w następujących celach:
-<ul>
-  <li>Prowadzenie newslettera</li>
-  <li>Prowadzenie systemu komentarzy</li>
+  title: '1. Informacje ogólne', text: `I. Niniejsza polityka dotyczy Serwisu www, funkcjonującego pod adresem url: aggiesvoicelab.com.<br/>
+II. Operatorem serwisu oraz Administratorem danych osobowych jest: Agnieszka Niemiec Szeligowska 53 / 64.<br/>
+III. Adres kontaktowy poczty elektronicznej operatora: aggiesvoicelab@gmail.com.<br/>
+IV. Operator jest Administratorem Twoich danych osobowych w odniesieniu do danych podanych dobrowolnie w Serwisie.<br/>
+V. Serwis wykorzystuje dane osobowe w następujących celach:
+<ol type="a">
   <li>Obsługa zapytań przez formularz</li>
   <li>Realizacja zamówionych usług</li>
   <li>Prezentacja oferty lub informacji</li>
-</ul>
-Serwis realizuje funkcje pozyskiwania informacji o użytkownikach i ich zachowaniu w następujący sposób:<br/>
-Poprzez dobrowolnie wprowadzone w formularzach dane, które zostają wprowadzone do systemów Operatora.<br/>
-Poprzez zapisywanie w urządzeniach końcowych plików cookie (tzw. „ciasteczka”).`}, {
-  title: '2. Wybrane metody ochrony danych stosowane przez Operatora', text: `Miejsca logowania i wprowadzania danych osobowych są chronione w warstwie transmisji (certyfikat SSL). Dzięki temu dane osobowe i dane logowania, wprowadzone na stronie, zostają zaszyfrowane w komputerze użytkownika i mogą być odczytane jedynie na docelowym serwerze.<br/>
-W serwisie jest stosowana autentykacja dwuskładnikowa, co stanowi dodatkową formę ochrony logowania do Serwisu.<br/>
-Operator okresowo zmienia swoje hasła administracyjne.<br/>
-Istotnym elementem ochrony danych jest regularna aktualizacja wszelkiego oprogramowania, wykorzystywanego przez Operatora do przetwarzania danych osobowych, co w szczególności oznacza regularne aktualizacje komponentów programistycznych.`}, { title: '3. Hosting', text: `Serwis jest hostowany (technicznie utrzymywany) na serwerach operatora: Vercel` }, {
-  title: '4. Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych', text: `W niektórych sytuacjach Administrator ma prawo przekazywać Twoje dane osobowe innym odbiorcom, jeśli będzie to niezbędne do wykonania zawartej z Tobą umowy lub do zrealizowania obowiązków ciążących na Administratorze. Dotyczy to takich grup odbiorców:
-<ul>
+</ol>
+VI. Serwis realizuje funkcje pozyskiwania informacji o użytkownikach i ich zachowaniu w następujący sposób:
+<ol type="a">
+<li>Poprzez dobrowolnie wprowadzone w formularzach dane, które zostają wprowadzone do systemów Operatora.</li>
+</ol>`}, {
+  title: '2. Wybrane metody ochrony danych stosowane przez Operatora', text: `I. Miejsca wprowadzania danych osobowych są chronione w warstwie transmisji (certyfikat SSL). Dzięki temu dane osobowe, wprowadzone na stronie, zostają zaszyfrowane w komputerze użytkownika i mogą być odczytane jedynie na docelowym serwerze.<br/>
+II. Operator okresowo zmienia swoje hasła administracyjne.<br/>
+III. Istotnym elementem ochrony danych jest regularna aktualizacja wszelkiego oprogramowania, wykorzystywanego przez Operatora do przetwarzania danych osobowych, co w szczególności oznacza regularne aktualizacje komponentów programistycznych.`}, { title: '3. Hosting', text: `I. Serwis jest hostowany (technicznie utrzymywany) na serwerach operatora: Vercel` }, {
+  title: '4. Twoje prawa i dodatkowe informacje o sposobie wykorzystania danych', text: `I. W niektórych sytuacjach Administrator ma prawo przekazywać Twoje dane osobowe innym odbiorcom, jeśli będzie to niezbędne do wykonania zawartej z Tobą umowy lub do zrealizowania obowiązków ciążących na Administratorze. Dotyczy to takich grup odbiorców:
+<ol type="a">
 <li>firma hostingowa na zasadzie powierzenia</li>
 <li>operatorzy płatności</li>
-<li>operatorzy systemu komentarzy</li>
 <li>firmy, świadczące usługi marketingu na rzecz Administratora</li>
-</ul>
-Twoje dane osobowe przetwarzane przez Administratora nie dłużej, niż jest to konieczne do wykonania związanych z nimi czynności określonych osobnymi przepisami (np. o prowadzeniu rachunkowości). W odniesieniu do danych marketingowych dane nie będą przetwarzane dłużej niż przez 3 lata.<br/>
-Przysługuje Ci prawo żądania od Administratora:
-<ul>
+</ol>
+II. Twoje dane osobowe przetwarzane przez Administratora nie dłużej, niż jest to konieczne do wykonania związanych z nimi czynności określonych osobnymi przepisami (np. o prowadzeniu rachunkowości). W odniesieniu do danych marketingowych dane nie będą przetwarzane dłużej niż przez 3 lata.<br/>
+III. Przysługuje Ci prawo żądania od Administratora:
+<ol type="a">
 <li>dostępu do danych osobowych Ciebie dotyczących,</li>
 <li>ich sprostowania,</li>
 <li>usunięcia,</li>
 <li>ograniczenia przetwarzania,</li>
 <li>oraz przenoszenia danych.</li>
-</ul>
-Przysługuje Ci prawo do złożenia sprzeciwu w zakresie przetwarzania wskazanego w pkt 3.3 c) wobec przetwarzania danych osobowych w celu wykonania prawnie uzasadnionych interesów realizowanych przez Administratora, w tym profilowania, przy czym prawo sprzeciwu nie będzie mogło być wykonane w przypadku istnienia ważnych prawnie uzasadnionych podstaw do przetwarzania, nadrzędnych wobec Ciebie interesów, praw i wolności, w szczególności ustalenia, dochodzenia lub obrony roszczeń.<br/>
-Na działania Administratora przysługuje skarga do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.<br/>
-Podanie danych osobowych jest dobrowolne, lecz niezbędne do obsługi Serwisu.<br/>
-W stosunku do Ciebie mogą być podejmowane czynności polegające na zautomatyzowanym podejmowaniu decyzji, w tym profilowaniu w celu świadczenia usług w ramach zawartej umowy oraz w celu prowadzenia przez Administratora marketingu bezpośredniego.<br/>
-Dane osobowe nie są przekazywane od krajów trzecich w rozumieniu przepisów o ochronie danych osobowych. Oznacza to, że nie przesyłamy ich poza teren Unii Europejskiej.`}, {
-  title: '5. Informacje w formularzach', text: `Serwis zbiera informacje podane dobrowolnie przez użytkownika, w tym dane osobowe, o ile zostaną one podane.<br/>
-Serwis może zapisać informacje o parametrach połączenia (oznaczenie czasu, adres IP).<br/>
-Serwis, w niektórych wypadkach, może zapisać informację ułatwiającą powiązanie danych w formularzu z adresem e-mail użytkownika wypełniającego formularz. W takim wypadku adres e-mail użytkownika pojawia się wewnątrz adresu url strony zawierającej formularz.
-Dane podane w formularzu są przetwarzane w celu wynikającym z funkcji konkretnego formularza, np. w celu dokonania procesu obsługi zgłoszenia serwisowego lub kontaktu handlowego, rejestracji usług itp. Każdorazowo kontekst i opis formularza w czytelny sposób informuje, do czego on służy.`}, { title: '6. Logi Administratora', text: `Informacje zachowaniu użytkowników w serwisie mogą podlegać logowaniu. Dane te są wykorzystywane w celu administrowania serwisem.` }, {
+</ol>
+IV. Przysługuje Ci prawo do złożenia sprzeciwu w zakresie przetwarzania wskazanego w pkt 3.3 c) wobec przetwarzania danych osobowych w celu wykonania prawnie uzasadnionych interesów realizowanych przez Administratora, w tym profilowania, przy czym prawo sprzeciwu nie będzie mogło być wykonane w przypadku istnienia ważnych prawnie uzasadnionych podstaw do przetwarzania, nadrzędnych wobec Ciebie interesów, praw i wolności, w szczególności ustalenia, dochodzenia lub obrony roszczeń.<br/>
+V. Na działania Administratora przysługuje skarga do Prezesa Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Warszawa.<br/>
+VI. Podanie danych osobowych jest dobrowolne, lecz niezbędne do obsługi Serwisu.<br/>
+VII. W stosunku do Ciebie mogą być podejmowane czynności polegające na zautomatyzowanym podejmowaniu decyzji, w tym profilowaniu w celu świadczenia usług w ramach zawartej umowy oraz w celu prowadzenia przez Administratora marketingu bezpośredniego.<br/>
+VIII. Dane osobowe nie są przekazywane od krajów trzecich w rozumieniu przepisów o ochronie danych osobowych. Oznacza to, że nie przesyłamy ich poza teren Unii Europejskiej.`}, {
+  title: '5. Informacje w formularzach', text: `I. Serwis zbiera informacje podane dobrowolnie przez użytkownika, w tym dane osobowe, o ile zostaną one podane.<br/>
+II. Serwis może zapisać informacje o parametrach połączenia (oznaczenie czasu).<br/>
+III. Serwis, w niektórych wypadkach, może zapisać informację ułatwiającą powiązanie danych w formularzu z adresem e-mail użytkownika wypełniającego formularz. W takim wypadku adres e-mail użytkownika pojawia się wewnątrz adresu url strony zawierającej formularz.
+Dane podane w formularzu są przetwarzane w celu wynikającym z funkcji konkretnego formularza, np. w celu dokonania procesu obsługi zgłoszenia serwisowego lub kontaktu handlowego, rejestracji usług itp. Każdorazowo kontekst i opis formularza w czytelny sposób informuje, do czego on służy.`}, { title: '6. Logi Administratora', text: `I. Informacje zachowaniu użytkowników w serwisie mogą podlegać logowaniu. Dane te są wykorzystywane w celu administrowania serwisem.` }, {
   title: '7. Istotne techniki marketingowe', text: `Operator stosuje analizę statystyczną ruchu na stronie, poprzez Google Analytics (Google Inc. z siedzibą w USA). Operator nie przekazuje do operatora tej usługi danych osobowych, a jedynie zanonimizowane informacje. Usługa bazuje na wykorzystaniu ciasteczek w urządzeniu końcowym użytkownika. W zakresie informacji o preferencjach użytkownika gromadzonych przez sieć reklamową Google użytkownik może przeglądać i edytować informacje wynikające z plików cookies przy pomocy narzędzia: https://www.google.com/ads/preferences/ <br/>
 Operator stosuje techniki remarketingowe, pozwalające na dopasowanie przekazów reklamowych do zachowania użytkownika na stronie, co może dawać złudzenie, że dane osobowe użytkownika są wykorzystywane do jego śledzenia, jednak w praktyce nie dochodzi do przekazania żadnych danych osobowych od Operatora do operatorom reklam. Technologicznym warunkiem takich działań jest włączona obsługa plików cookie.<br/>
 Operator stosuje korzysta z piksela Facebooka. Ta technologia powoduje, że serwis Facebook (Facebook Inc. z siedzibą w USA) wie, że dana osoba w nim zarejestrowana korzysta z Serwisu. Bazuje w tym wypadku na danych, wobec których sam jest administratorem, Operator nie przekazuje od siebie żadnych dodatkowych danych osobowych serwisowi Facebook. Usługa bazuje na wykorzystaniu ciasteczek w urządzeniu końcowym użytkownika.<br/>
@@ -156,3 +153,54 @@ Urządzenia mobilne:
 <li>Windows Phone</li>
 </ul>
 `}]
+
+export const TERMS_OF_SERVICE = [{title: `1. Zasady ogólne.
+`, text: `<ol type="a">
+<li>Aggie’s Voice Lab ma na celu rozwijanie umiejętności wokalnych uczestników i uczestniczek.
+</li>
+<li>Właścicielką oraz trenerką wokalną w Aggie’s Voice Lab jest Agnieszka Niemiec.
+</li>
+<li>Uczestnikiem lub uczestniczką zajęć może być osoba, która ukończyła 16 lat oraz nie ma medycznych przeciwwskazań do pracy z głosem.
+</li>
+</ol>`}, {title: `2. Darmowa konsultacja.`, text: `<ol type="a">
+<li>Masz możliwość jednorazowego skorzystania z darmowej konsultacji.
+</li>
+<li>Darmowa konsultacja odbywa się online za pośrednictwem platformy Zoom i trwa 15 minut.
+</li>
+<li>Umówienie się na konsultację odbywa się poprzez aplikację Calendly. Aby umówić się na konsultację, wybierz dostępną godzinę i podaj swój adres e-mail. Calendly prześle na niego potwierdzenie rezerwacji oraz dedykowany link do platformy Zoom.
+</li>
+<li>Konsultacja nie zobowiązuje do zapisania się na zajęcia płatne.
+</li>
+</ol>`}, {title: `3. Zapisy na indywidualne lekcje śpiewu.
+`, text: `<ol type="a">
+<li>Na indywidualną lekcję śpiewu można umówić się podczas darmowej konsultacji albo poprzez formularz kontaktowy na stronie internetowej, kontakt mailowy lub wysłanie prywatnej wiadomości na portalach społecznościowych Facebook, Instagram lub TikTok.
+</li>
+</ol>`}, {title: `4. Płatności.`, text: `<ol type="a">
+<li>Opłata za lekcje stacjonarne wnoszona jest gotówką albo przelewem BLIK na podany przez Aggie’s Voice Lab numer telefonu po zakończeniu lekcji.
+</li>
+<li>Opłata za lekcje online powinna być dokonana przed rozpoczęciem lekcji, w formie przelewu albo przelewu BLIK na podany przez Aggie’s Voice Lab numer telefonu.</li>
+<li>Cena lekcji wynika z <a href="https://aggiesvoicelab.com/cennik" target="_blank">Cennika</a> obowiązującego w dniu, w którym umawiasz się na lekcję.</li>
+</ol>`}, {title: `5. Zajęcia.`, text: `<ol type="a">
+<li>Ze względu na komfort wspólnej pracy, zajęcia rozpoczynamy punktualnie tj. w umówionym dniu i godzinie.</li>
+<li>Jedna lekcja indywidualna trwa 50 minut.
+</li>
+<li>Zajęcia online odbywają się za pośrednictwem platformy Skype.
+</li>
+</ol>`},  {title: `6. Pakiety zajęć.`, text: `<ol type="a">
+<li>W przypadku zakupu pakietu lekcji płatność za cały pakiet odbywa się gotówką, w formie przelewu albo przelewu BLIK na podany przez Aggie’s Voice Lab numer telefonu przed rozpoczęciem pierwszej lekcji z pakietu.</li>
+<li>Pierwsza lekcja powinna odbyć się najpóźniej 4 tygodnie po zakupieniu pakietu lekcji.</li>
+<li>Pakiet lekcji jest ważny przez 4 tygodnie od momentu wykorzystania pierwszej lekcji z pakietu.</li>
+<li>Aggie’s Voice Lab zobowiązuje się zapewnić stały termin zajęć dla osoby, która zakupiła pakiet, o ile termin ten będzie dostępny. 
+</li>
+<li>W przypadku świąt lub urlopu Aggie’s Voice Lab proponuje nowy termin lekcji.
+</li>
+<li>Ewentualne przedłużenie okresu obowiązywania pakietu lekcji wymaga wyraźnej zgody Aggie’s Voice Lab.</li>
+</ol>`},  {title: `7. Odwoływanie zajęć.
+`, text: `<ol type="a">
+<li>Zajęcia można odwołać bez ponoszenia kosztów na 48 godzin przed umówionym terminem.</li>
+<li>W przypadku odwołania zajęć na mniej niż 48 godzin, ale więcej niż 24 godziny przed jej rozpoczęciem, ponosisz koszt 50% ceny lekcji.</li>
+<li>W przypadku odwołania zajęć na mniej niż 24 godziny przed rozpoczęciem lekcji, ponosisz koszt 100% ceny lekcji.
+</li>
+</ol>`}, {title: `8. Postanowienia końcowe.`, text: `<ol type="a">
+<li> Aggie’s Voice Lab zastrzega sobie prawo do wprowadzenia zmian w regulaminie w każdym czasie.</li>
+</ol>`}]

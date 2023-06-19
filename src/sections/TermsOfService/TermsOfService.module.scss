@@ -1,7 +1,7 @@
 @import '@/styles/variables.scss';
 @import '@/styles/mixins.scss';
 
-.privacyWrapper {
+.termsWrapper {
   color: $color-bunting;
   padding: 30px 20px;
   background-color: $color-white;
@@ -27,5 +27,9 @@
 
   & ol {
     margin-left: 34px;
+  }
+
+  & a {
+    text-decoration: underline;
   }
 }

@@ -37,12 +37,12 @@ const Pricing = () => {
           <div className={`${styles.ctaWrapper} ${redHatDisplay.className}`}>
             <div className={styles.payment}><p>Metody płatności:</p>
               <ul>
-                <li>&#10004;<span>gotówka</span></li>
-                <li>&#10004;<span>przelew</span></li>
-                <li>&#10004;<span>BLIK na telefon</span></li>
+                <li>✅<span>gotówka</span></li>
+                <li>✅<span>przelew</span></li>
+                <li>✅<span>BLIK na telefon</span></li>
                 <li>✘<span>brak opcji płatności kartą</span></li>
               </ul>
-              <p>Szczegóły dotyczące płatności oraz zasady odwoływania lekcji znajdziesz w regulaminie. Umówienie się na lekcję jest jednoznaczne z jego akceptacją.</p></div>
+              <p>Szczegóły dotyczące płatności oraz zasady odwoływania lekcji znajdziesz w <Link href="/regulamin" target="_blank">regulaminie</Link>. Umówienie się na lekcję jest jednoznaczne z jego akceptacją.</p></div>
               <div className={`${styles.info} ${alexandria.className}`}>
             <div className={styles.box}>
               <div className={styles.boxInner}>

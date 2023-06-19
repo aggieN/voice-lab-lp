@@ -1,0 +1,150 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.container {
+  padding: 30px 10px 60px;
+  color: $color-bunting;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $break-sm) {
+    padding: 30px 40px 60px;
+  }
+
+  @media (min-width: $break-md) {
+    padding: 0 20px 80px;
+  }
+
+  @media (min-width: $break-lg) {
+    padding: 0 20px 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $break-xl) {
+    padding: 0 20px 100px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+
+  @media (min-width: $break-sm) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $break-md) {
+    font-size: 26px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  margin-bottom: 30px;
+
+  @media (min-width: $break-sm) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $break-xl) {
+    font-size: 22px;
+  }
+}
+
+.textWrapper {
+  width: 100%;
+
+  @media (min-width: $break-lg) {
+    width: 55%;
+  }
+
+  @media (min-width: $break-2xl) {
+    width: 47%;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $break-md) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $break-lg) {
+    flex-direction: column;
+    width: 45%;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  @media (min-width: $break-2xl) {
+    width: 53%;
+    align-items: center;
+  }
+}
+
+.image {
+  width: 120%;
+  height: auto;
+
+  &:last-of-type {
+    margin-left: 14px;
+  }
+
+  @media (min-width: $break-sm) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: $break-xl) {
+    width: 90%;
+    height: auto;
+  }
+
+  @media (min-width: $break-2xl) {
+    width: 85%;
+    height: auto;
+  }
+}
+
+.buttonWrapper {
+  text-align: center;
+
+  @media (min-width: $break-lg) {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.button {
+  @include button;
+  border-color: $color-bunting;
+  background-color: transparent;
+  color: $color-bunting;
+  transition: all .3s linear;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+
+  &:hover {
+    box-shadow: -7px -7px 0px -2px $color-bouquet;
+  }
+
+  &:active {
+    color: $color-vanilla;
+    background-color: $color-bunting;
+    font-weight: 600;
+  }
+}

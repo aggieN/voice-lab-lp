@@ -57,10 +57,10 @@ const Contact = () => {
           <div className={styles.left}>
             <h1 className={`${styles.title} ${alexandria.className}`}><span>Kontakt</span></h1>
             <div className={styles.social}>
-              <p className={`${styles.text} ${redHatDisplay.className}`}>Napisz do mnie tutaj lub skontaktuj się poprzez moje social media</p>
-              <div className={styles.iconsWrapper}>
+              <p className={`${styles.text} ${redHatDisplay.className}`}>Wypełnij formularz lub napisz do mnie maila na <a href="mailto:aggiesvoicelab@gmail.com">aggiesvoicelab@gmail.com</a></p>
+              {/* <div className={styles.iconsWrapper}>
                 <SocialIcons variant="dark" />
-              </div>
+              </div> */}
             </div>
             <div><p className={`${styles.text} ${redHatDisplay.className}`}>Jeśli chcesz mnie lepiej poznać zanim się zdecydujesz, skorzystaj z darmowej konsultacji</p>
               <Link href="/konsultacja"><button className={`${jura.className} ${styles.button}`}>zapisz się na darmową konsultację</button></Link>
