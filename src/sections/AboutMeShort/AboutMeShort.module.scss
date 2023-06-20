@@ -23,7 +23,7 @@
 }
 
 .title {
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 16px;
@@ -38,12 +38,8 @@
 }
 
 .text {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 30px;
-
-  @media (min-width: $break-sm) {
-    font-size: 16px;
-  }
 
   @media (min-width: $break-lg) {
     font-size: 20px;

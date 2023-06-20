@@ -17,7 +17,7 @@ const Intro = () => {
             <h2 className={`${styles.leftCol} ${alexandria.className} `}><span>Witaj w </span><span>Aggie&apos;s Voice Lab</span></h2>
             <div className={`${styles.rightCol} ${redHatDisplay.className} `}>
               <p>
-                - szkole śpiewu, gdzie eksperymentowanie, kreatywność i bezpieczna przestrzeń spotykają się, aby odkrywać potencjał Twojego głosu. W moim laboratorium stawiam na twórcze podejście do nauki śpiewu. Wierzę, że każdy głos jest unikalny i posiada nieograniczone możliwości. Niezależnie od tego, czy jesteś początkującym, czy doświadczoną wokalistką, moja misja polega na tym, aby wspierać Cię w odkrywaniu i poszerzaniu granic Twojego głosu.
+                - szkole śpiewu, gdzie liczy się eksperymentowanie i kreatywność. To bezpieczna przestrzeń stworzona, aby odkrywać potencjał Twojego głosu. W moim laboratorium stawiam na twórcze podejście do nauki śpiewu. Wierzę, że każdy głos jest unikalny i posiada nieograniczone możliwości. Niezależnie od tego, czy jesteś początkującym, czy doświadczoną wokalistką, moja misja polega na tym, aby wspierać Cię w poszerzaniu granic Twojego głosu.
               </p>
             </div>
 

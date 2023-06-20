@@ -104,10 +104,10 @@ const Navbar = () => {
         <motion.ul className={styles.navMobile} variants={container}
           initial="hidden"
           animate={isMenuOpen ? "show" : "hide"}>
-          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/o-mnie" >o mnie</Link></motion.li>
-          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/lekcje-spiewu" >lekcje śpiewu</Link></motion.li>
-          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/cennik" >cennik</Link></motion.li>
-          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/kontakt" >kontakt</Link></motion.li>
+          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/o-mnie">o mnie</Link></motion.li>
+          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/lekcje-spiewu">lekcje śpiewu</Link></motion.li>
+          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/cennik">cennik</Link></motion.li>
+          <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/kontakt">kontakt</Link></motion.li>
         </motion.ul>
         {/* <div className={styles.socials}>
             <SocialIcons variant="light" />
