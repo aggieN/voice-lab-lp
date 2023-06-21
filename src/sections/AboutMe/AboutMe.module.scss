@@ -36,6 +36,17 @@
     padding: 60px 0 16px;
   }
 
+  &:nth-child(2) {
+
+    @media (min-width: $break-md) {
+      padding-top: 0;
+    }
+
+    @media (min-width: $break-lg) {
+      padding-top: 60px;
+    }
+  }
+
   @media (min-width: $break-md) {
     flex-direction: row;
 
@@ -97,6 +108,14 @@
 
   @media (min-width: $break-sm) {
     padding: 0 30px;
+  }
+
+  @media (min-width: $break-md) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $break-lg) {
+    font-size: 18px;
   }
 
   a {
