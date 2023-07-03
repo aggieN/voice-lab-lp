@@ -26,13 +26,14 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: block;
-      width: 17px;
+      width: 9px;
       height: 2px;
       background-color: $color-bunting;
       z-index: 6;
 
       &:nth-child(2) {
         top: 52%;
+        width: 13px;
       }
 
       &:nth-child(3) {
@@ -187,6 +188,7 @@
     font-weight: 600;
     padding: 2px;
     height: fit-content;
+    transition: all .2s ease-in;
 
     &:hover {
       transform: skew(-10deg);
