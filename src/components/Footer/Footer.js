@@ -2,7 +2,7 @@ import Wrapper from '@/components/Wrapper/Wrapper';
 import SocialIcons from '@/components/SocialIcons/SocialIcons';
 import Link from 'next/link';
 
-import { redHatDisplay, jura } from "@/utils/fonts";
+import { redHatDisplay } from "@/utils/fonts";
 
 import * as styles from './Footer.module.scss'
 

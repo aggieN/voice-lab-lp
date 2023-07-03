@@ -8,7 +8,6 @@ import Logo from '@/components/Logo/Logo'
 
 import { alexandria, jura } from "@/utils/fonts";
 import * as styles from './Navbar.module.scss';
-// import SocialIcons from '../SocialIcons/SocialIcons';
 
 const container = {
   hidden: { opacity: 0 },
@@ -109,9 +108,6 @@ const Navbar = () => {
           <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/cennik">cennik</Link></motion.li>
           <motion.li onClick={() => setMenuOpen(false)} variants={item}><Link href="/kontakt">kontakt</Link></motion.li>
         </motion.ul>
-        {/* <div className={styles.socials}>
-            <SocialIcons variant="light" />
-          </div> */}
       </div>
 
     </nav>
